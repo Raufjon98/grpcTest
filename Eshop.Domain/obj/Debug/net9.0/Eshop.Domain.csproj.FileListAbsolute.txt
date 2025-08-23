@@ -1,0 +1,11 @@
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Domain/bin/Debug/net9.0/Eshop.Domain.deps.json
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Domain/bin/Debug/net9.0/Eshop.Domain.dll
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Domain/bin/Debug/net9.0/Eshop.Domain.pdb
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Domain/obj/Debug/net9.0/Eshop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Domain/obj/Debug/net9.0/Eshop.Domain.AssemblyInfoInputs.cache
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Domain/obj/Debug/net9.0/Eshop.Domain.AssemblyInfo.cs
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Domain/obj/Debug/net9.0/Eshop.Domain.csproj.CoreCompileInputs.cache
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Domain/obj/Debug/net9.0/Eshop.Domain.dll
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Domain/obj/Debug/net9.0/refint/Eshop.Domain.dll
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Domain/obj/Debug/net9.0/Eshop.Domain.pdb
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Domain/obj/Debug/net9.0/ref/Eshop.Domain.dll

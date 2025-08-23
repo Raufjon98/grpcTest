@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcGenerated";
+package product;
+service ProductService 
+{
+  rpc CreateProduct (CreateProductRequest) returns (CreateProductResponse);
+  rpc GetProducts (Empty) returns (ProductList);    
+  rpc UpdateProduct(UpdateProductRequest) returns (CreateProductResponse);
+}
+
+message CreateProductRequest
+{
+  string name = 1;
+  string description = 2;
+  double price = 3;   
+}
+
+message CreateProductResponse
+{
+  string name = 1;
+  string description = 2;
+  double price  = 3;
+  int32 Id = 4;
+}
+
+message UpdateProductRequest
+{
+  int32 productId = 1;
+  string name = 2;
+  string description = 3;
+  string price = 4;
+}
+
+message Empty {}
+
+message ProductList
+{
+  repeated CreateProductResponse products = 1; //repeated == List
+}
+

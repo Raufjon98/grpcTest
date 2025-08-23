@@ -1,0 +1,17 @@
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/bin/Debug/net9.0/Eshop.Infrastructure.deps.json
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/bin/Debug/net9.0/Eshop.Infrastructure.dll
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/bin/Debug/net9.0/Eshop.Infrastructure.pdb
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/bin/Debug/net9.0/Eshop.Application.dll
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/bin/Debug/net9.0/Eshop.Domain.dll
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/bin/Debug/net9.0/Eshop.Domain.pdb
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/bin/Debug/net9.0/Eshop.Application.pdb
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/obj/Debug/net9.0/Eshop.Infrastructure.csproj.AssemblyReference.cache
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/obj/Debug/net9.0/Eshop.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/obj/Debug/net9.0/Eshop.Infrastructure.AssemblyInfoInputs.cache
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/obj/Debug/net9.0/Eshop.Infrastructure.AssemblyInfo.cs
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/obj/Debug/net9.0/Eshop.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/obj/Debug/net9.0/Eshop.In.BD5458F1.Up2Date
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/obj/Debug/net9.0/Eshop.Infrastructure.dll
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/obj/Debug/net9.0/refint/Eshop.Infrastructure.dll
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/obj/Debug/net9.0/Eshop.Infrastructure.pdb
+/Users/raufaliboev/RiderProjects/GRPC/Eshop/Eshop.Infrastructure/obj/Debug/net9.0/ref/Eshop.Infrastructure.dll

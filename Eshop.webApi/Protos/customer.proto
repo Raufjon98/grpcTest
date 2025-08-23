@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcGenerated";
+package customer;
+service CustomerService
+{
+  rpc  CreateCustomer (CreateCustomerRequest) returns (CreateCustomerResponse);
+  rpc GetCustomers (CustomerEmpry) returns (CustomerList);
+  rpc UpdateCustomer(UpdateCustomerRequest) returns(CreateCustomerResponse);
+}
+
+message CreateCustomerRequest
+{
+  string Name = 1;
+  string Email = 2;
+  string Phone = 3;
+}
+
+message CreateCustomerResponse
+{
+  int32 Id = 1;
+  string Name = 2;
+  string Email = 3;
+  string Phone = 4;
+}
+
+message UpdateCustomerRequest
+{
+  int32 customerId = 1;
+  string Name = 2;
+  string Email = 3;
+  string Phone = 4;
+}
+
+message CustomerEmpry{}
+
+message CustomerList
+{
+  repeated CreateCustomerResponse customers = 1;
+}

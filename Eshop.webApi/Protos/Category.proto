@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcGenerated";
+package category;
+service CategoryService
+{
+  rpc CreateCategory (CreateCategoryRequest) returns (CreateCategoryResponse);
+  rpc GetCategories (CategoryEmpty) returns (CategoryList);
+  rpc UpdateCategory(UpdateCategoryRequest) returns(CreateCategoryResponse);
+}
+
+message CreateCategoryRequest
+{
+  string name = 1;
+  string description = 2;
+}
+
+message CreateCategoryResponse
+{
+  string name = 1;
+  string description = 2;
+}
+
+message UpdateCategoryRequest
+{
+  int32 CategoryId = 1;
+  string name = 2;
+  string description = 3;
+}
+
+message CategoryEmpty{}
+
+message CategoryList
+{
+  repeated CreateCategoryResponse categories = 1;
+}

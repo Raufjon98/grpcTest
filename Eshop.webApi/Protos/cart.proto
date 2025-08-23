@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcGenerated";
+package cart;
+
+service CartService
+{
+  rpc CreateCart(CreateCartRequest) returns (CreateCartResponse);
+  rpc GetCarts (CartEmpty) returns (CartList);
+  rpc UpdateCart(UpdateCartRequest) returns(CreateCartResponse);
+}
+
+message CreateCartRequest
+{
+  int32 CustomerId = 1;
+}
+
+message CreateCartResponse
+{
+  int32 Id = 1;
+  int32 CustomerId = 2;
+}
+
+message UpdateCartRequest
+{
+  int32 CartId = 1;
+  int32 CustomerId = 2; 
+}
+
+message CartEmpty{}
+
+message CartList
+{
+  repeated CreateCartResponse carts = 1;
+}

@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcGenerated";
+package order;
+service OrderService
+{
+  rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse); 
+  rpc GetOrders (OrderEmpty) returns (OrderList);
+  rpc UpdateOrder(UpdateOrderRequest) returns (CreateOrderResponse);
+}
+
+message CreateOrderRequest
+{
+  int32 CustomerId = 1;
+  int32 CartId = 2;
+}
+
+message CreateOrderResponse
+{
+  int32 Id = 1;
+  int32 CustomerId = 2;
+  int32 CartId = 3;
+}
+
+message UpdateOrderRequest
+{
+  int32 orderId = 1;
+  int32 CustomerId = 2;
+  int32 CartId = 3;
+}
+
+message OrderEmpty{}
+
+message OrderList
+{
+  repeated CreateOrderResponse orders = 1;
+}

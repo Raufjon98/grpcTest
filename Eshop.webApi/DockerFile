@@ -1,0 +1,22 @@
+# Use the official .NET SDK image for build
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+WORKDIR /src
+
+# Copy solution and restore dependencies
+COPY *.sln .
+COPY YourProject.WebApi/*.csproj YourProject.WebApi/
+COPY YourProject.Application/*.csproj YourProject.Application/
+COPY YourProject.Infrastructure/*.csproj YourProject.Infrastructure/
+COPY YourProject.Domain/*.csproj YourProject.Domain/
+RUN dotnet restore
+
+# Copy all files and build
+COPY . .
+WORKDIR /Eshop/Eshop.WebApi
+RUN dotnet publish -c Release -o /app/publish
+
+# Runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+WORKDIR /app
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "Eshop.WebApi.dll"]
