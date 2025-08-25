@@ -8,7 +8,7 @@ using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddDbContextPool<ApplicationDbContext>(options =>
     // options.UseInMemoryDatabase("eshopdb"));
     options.UseNpgsql(connectionString));
 builder.Services.AddScoped<IApplicationDbContext>(provider => 
@@ -17,6 +17,7 @@ builder.Services.AddMediatR(typeof(Eshop.Application.AssemblyReference).Assembly
 builder.Services.AddGrpc();
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
+
 
 var app = builder.Build();
 app.MapGrpcService<ProductGrpcService>();
