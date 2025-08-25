@@ -5,8 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Eshop.Application.Orders.Queries;
 
-public record GetOrdersQuery : IRequest<List<Order>>;
-public class GetOrdersQueryHandler : IRequestHandler<GetOrdersQuery, List<Order>>
+public record GetOrdersQuery : IRequest<List<OrderVM>>;
+public class GetOrdersQueryHandler : IRequestHandler<GetOrdersQuery, List<OrderVM>>
 {
     private readonly IApplicationDbContext _context;
 
@@ -14,9 +14,19 @@ public class GetOrdersQueryHandler : IRequestHandler<GetOrdersQuery, List<Order>
     {
         _context = context;
     }
-    public async Task<List<Order>> Handle(GetOrdersQuery request, CancellationToken cancellationToken)
+    public async Task<List<OrderVM>> Handle(GetOrdersQuery request, CancellationToken cancellationToken)
     {
         var Orders = await _context.Orders.ToListAsync();
-        return Orders;
+        List<OrderVM> result =  new List<OrderVM>();
+        foreach (var order in Orders)
+        {
+            result.Add(new OrderVM
+            {
+                Id = order.Id,
+                CustomerId = order.CustomerId,
+                CartId = order.CartId,
+            });
+        }
+        return result;
     }
 }

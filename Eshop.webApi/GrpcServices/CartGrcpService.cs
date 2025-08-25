@@ -48,7 +48,7 @@ public class CartGrcpService : CartService.CartServiceBase
         return response;
     }
 
-    public async Task<CreateCartResponse> UpdateCart(UpdateCartRequest request, ServerCallContext context)
+    public override async Task<CreateCartResponse> UpdateCart(UpdateCartRequest request, ServerCallContext context)
     {
        var command =new UpdateCartCommand(request.CartId, new CartDto{CustomerId = request.CustomerId});
        var result = await _mediator.Send(command);

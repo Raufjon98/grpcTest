@@ -5,8 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Eshop.Application.Carts.Queries;
 
-public record GetCartsQuery : IRequest<List<Cart>>;
-public class GetCartsQueryHandler : IRequestHandler<GetCartsQuery, List<Cart>>
+public record GetCartsQuery : IRequest<List<CartVM>>;
+public class GetCartsQueryHandler : IRequestHandler<GetCartsQuery, List<CartVM>>
 {
     private readonly IApplicationDbContext _context;
 
@@ -14,9 +14,18 @@ public class GetCartsQueryHandler : IRequestHandler<GetCartsQuery, List<Cart>>
     {
         _context = context;
     }
-    public async Task<List<Cart>> Handle(GetCartsQuery request, CancellationToken cancellationToken)
+    public async Task<List<CartVM>> Handle(GetCartsQuery request, CancellationToken cancellationToken)
     {
         var carts = await _context.Carts.ToListAsync();
-        return carts;
+        List<CartVM> result = new List<CartVM>();
+        foreach (var cart in carts)
+        {
+            result.Add(new CartVM
+            {
+                Id = cart.Id,
+                CustomerId = cart.CustomerId,
+            });
+        }   
+        return result;
     }
 }

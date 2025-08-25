@@ -55,7 +55,7 @@ public class CategoryGrpcService : CategoryService.CategoryServiceBase
         return result;
     }
 
-    public async Task<CreateCategoryResponse> UpdateCategory(UpdateCategoryRequest request, ServerCallContext context)
+    public override async Task<CreateCategoryResponse> UpdateCategory(UpdateCategoryRequest request, ServerCallContext context)
     {
         var category = new CategoryDto
         {

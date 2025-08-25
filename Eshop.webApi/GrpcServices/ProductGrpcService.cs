@@ -61,7 +61,7 @@ public class ProductGrpcService : ProductService.ProductServiceBase
         return result;
     }
 
-    public async Task<CreateProductResponse> UpdateProduct(UpdateProductRequest request, ServerCallContext context)
+    public override async Task<CreateProductResponse> UpdateProduct(UpdateProductRequest request, ServerCallContext context)
     {
         var product = new ProductDto
         {

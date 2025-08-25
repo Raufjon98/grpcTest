@@ -20,8 +20,11 @@ public class UpdateOrderCommandHandler : IRequestHandler<UpdateOrderCommand, Ord
         
         order.CustomerId = request.Order.CustomerId;
         order.CartId = request.Order.CartId;
+        _context.Orders.Update(order);
+        await _context.SaveChangesAsync(cancellationToken);
         return new OrderVM
         {
+            Id = order.Id,
             CustomerId = order.CustomerId,
             CartId = order.CartId,
         };
