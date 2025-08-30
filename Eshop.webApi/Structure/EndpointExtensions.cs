@@ -13,6 +13,7 @@ public static class EndpointExtensions
             .WithGroupName(groupName)
             .WithTags(groupName);
     }
+
     public static WebApplication MapEndpoints(this WebApplication app)
     {
         var endpointGroupType = typeof(EndpointGroupBase);
@@ -23,12 +24,8 @@ public static class EndpointExtensions
             .Where(t => t.IsSubclassOf(endpointGroupType));
 
         foreach (var type in endpointGroupTypes)
-        {
             if (Activator.CreateInstance(type) is EndpointGroupBase instance)
-            {
                 instance.Map(app);
-            }
-        }
 
         return app;
     }

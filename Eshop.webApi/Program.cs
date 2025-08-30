@@ -29,5 +29,6 @@ if (app.Environment.IsDevelopment())
 }
 app.UseHttpsRedirection();
 app.MapEndpoints();
+app.MapGet("/", () => "Hello World from Docker!");
 app.Run();
 

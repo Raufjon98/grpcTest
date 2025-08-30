@@ -1,41 +1,41 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.31.1" />
-    <PackageReference Include="Grpc.AspNetCore" Version="2.71.0" />
-    <PackageReference Include="Grpc.Tools" Version="2.72.0">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.8" />
-    <PackageReference Include="Npgsql" Version="9.0.3" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
-    <PackageReference Include="Scalar.AspNetCore" Version="2.6.8" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Google.Protobuf" Version="3.31.1"/>
+        <PackageReference Include="Grpc.AspNetCore" Version="2.71.0"/>
+        <PackageReference Include="Grpc.Tools" Version="2.72.0">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.7"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.8"/>
+        <PackageReference Include="Npgsql" Version="9.0.3"/>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4"/>
+        <PackageReference Include="Scalar.AspNetCore" Version="2.6.8"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Eshop.Infrastructure\Eshop.Infrastructure.csproj" />
-    <ProjectReference Include="..\Eshop.Application\Eshop.Application.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Eshop.Infrastructure\Eshop.Infrastructure.csproj"/>
+        <ProjectReference Include="..\Eshop.Application\Eshop.Application.csproj"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <Protobuf Include="Protos\product.proto" GrpcServices="server" />
-    <Protobuf Include="Protos\category.proto" GrpcServices="server" />
-    <Protobuf Include="Protos\cart.proto" GrpcServices="server" />
-    <Protobuf Include="Protos\customer.proto" GrpcServices="server" />
-    <Protobuf Include="Protos\order.proto" GrpcServices="server" />
-  </ItemGroup>
+    <ItemGroup>
+        <Protobuf Include="Protos\product.proto" GrpcServices="server"/>
+        <Protobuf Include="Protos\category.proto" GrpcServices="server"/>
+        <Protobuf Include="Protos\cart.proto" GrpcServices="server"/>
+        <Protobuf Include="Protos\customer.proto" GrpcServices="server"/>
+        <Protobuf Include="Protos\order.proto" GrpcServices="server"/>
+    </ItemGroup>
 
 </Project>
